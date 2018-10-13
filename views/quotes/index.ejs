@@ -30,11 +30,11 @@
                     <div class="col-md-8 offset-2">
                         <div class="card shadow-lg p-3 mb-5 bg-white rounded">
                         <h1 class="text-center">Quotes</h1>
-                            <% for (const quote in quotes) { %>
+                            <% for (const x in quotes) { %>
                                 <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                                    <h3 class="text-center"><%= quote.name %></h3>
-                                    <p class="text-center"><%= quote.text %></p>
-                                    <small class="text-center"><%= quote.created_at %></small>
+                                    <h3 class="text-center"><%= quotes[x].name %></h3>
+                                    <p class=" lead text-center"><%= quotes[x].text %></p>
+                                    <p class="text-center"><%= quotes[x].created_at.toUTCString() %></p>
                                 </div>
                             <% } %>
                         </div>
